@@ -1,0 +1,23 @@
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: dw_postgres
+    environment:
+      POSTGRES_DB: data_warehouse
+      POSTGRES_USER: etl_user
+      POSTGRES_PASSWORD: etl_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init:/docker-entrypoint-initdb.d
+    networks:
+      - dw_network
+
+volumes:
+  postgres_data:
+
+networks:
+  dw_network:
+    driver: bridge

@@ -1,0 +1,4 @@
+--- Running Data Quality Checks ---
+❌ Found 5 negative prices. Requires cleanup.
+❌ Found 22950 negative quantities. Requires cleanup.
+--- Checks Complete ---

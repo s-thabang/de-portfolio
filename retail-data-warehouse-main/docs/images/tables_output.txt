@@ -1,0 +1,10 @@
+              List of relations
+  Schema   |     Name     | Type  |  Owner   
+-----------+--------------+-------+----------
+ analytics | dim_customer | table | etl_user
+ analytics | dim_date     | table | etl_user
+ analytics | dim_invoice  | table | etl_user
+ analytics | dim_product  | table | etl_user
+ analytics | fact_sales   | table | etl_user
+(5 rows)
+
