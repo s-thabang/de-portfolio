@@ -1,0 +1,27 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# AWS Credentials
+.aws/
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Data (too large for Git)
+data/raw/*.csv
+
+# OS
+.DS_Store
+*.swp
+
+# IDE
+.vscode/
+.idea/

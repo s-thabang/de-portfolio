@@ -1,0 +1,365 @@
+╔══════════════════════════════════════════════════════════════╗
+║     OLIST E-COMMERCE DATA ANALYTICS REPORT                   ║
+║     Serverless Data Pipeline Portfolio Project               ║
+╚══════════════════════════════════════════════════════════════╝
+
+Generated: $(date)
+Database: olist-pipeline_db
+Region: af-south-1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q1: Dataset Overview
+DESCRIPTION: Total records across all tables
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	entity	entity	UNKNOWN	11	0			varchar
+COLUMNINFO	False	hive	count	count	UNKNOWN	19	0			bigint
+DATA	entity
+DATA	count
+DATA	Sellers
+DATA	3095
+DATA	Customers
+DATA	99441
+DATA	Products
+DATA	32951
+DATA	Reviews
+DATA	99224
+DATA	Orders
+DATA	99441
+DATA	Order Items
+DATA	112650
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q2: Order Status Distribution
+DESCRIPTION: Breakdown of order statuses (delivered, canceled, etc.)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	order_status	order_status	UNKNOWN	2147483647	0			varchar
+COLUMNINFO	False	hive	order_count	order_count	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	percentage	percentage	UNKNOWN	17	0			double
+DATA	order_status
+DATA	order_count
+DATA	percentage
+DATA	delivered
+DATA	96478
+DATA	97.02
+DATA	shipped
+DATA	1107
+DATA	1.11
+DATA	canceled
+DATA	625
+DATA	0.63
+DATA	unavailable
+DATA	609
+DATA	0.61
+DATA	invoiced
+DATA	314
+DATA	0.32
+DATA	processing
+DATA	301
+DATA	0.3
+DATA	created
+DATA	5
+DATA	0.01
+DATA	approved
+DATA	2
+DATA	0.0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q3: Top 10 Revenue-Generating Categories
+DESCRIPTION: Which product categories generate the most revenue?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	category	category	UNKNOWN	2147483647	0			varchar
+COLUMNINFO	False	hive	total_orders	total_orders	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	total_revenue	total_revenue	UNKNOWN	17	0			double
+COLUMNINFO	False	hive	avg_price	avg_price	UNKNOWN	17	0			double
+DATA	category
+DATA	total_orders
+DATA	total_revenue
+DATA	avg_price
+DATA	health_beauty
+DATA	8836
+DATA	1258681.34
+DATA	130.16
+DATA	watches_gifts
+DATA	5624
+DATA	1205005.68
+DATA	201.14
+DATA	bed_bath_table
+DATA	9417
+DATA	1036988.68
+DATA	93.3
+DATA	sports_leisure
+DATA	7720
+DATA	988048.97
+DATA	114.34
+DATA	computers_accessories
+DATA	6689
+DATA	911954.32
+DATA	116.51
+DATA	furniture_decor
+DATA	6449
+DATA	729762.49
+DATA	87.56
+DATA	cool_stuff
+DATA	3632
+DATA	635290.85
+DATA	167.36
+DATA	housewares
+DATA	5884
+DATA	632248.66
+DATA	90.79
+DATA	auto
+DATA	3897
+DATA	592720.11
+DATA	139.96
+DATA	garden_tools
+DATA	3518
+DATA	485256.46
+DATA	111.63
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q4: Top 10 States by Customer Count
+DESCRIPTION: Geographic distribution of customers
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	customer_state	customer_state	UNKNOWN	2147483647	0			varchar
+COLUMNINFO	False	hive	customer_count	customer_count	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	percentage	percentage	UNKNOWN	17	0			double
+DATA	customer_state
+DATA	customer_count
+DATA	percentage
+DATA	SP
+DATA	41746
+DATA	41.98
+DATA	RJ
+DATA	12852
+DATA	12.92
+DATA	MG
+DATA	11635
+DATA	11.7
+DATA	RS
+DATA	5466
+DATA	5.5
+DATA	PR
+DATA	5045
+DATA	5.07
+DATA	SC
+DATA	3637
+DATA	3.66
+DATA	BA
+DATA	3380
+DATA	3.4
+DATA	DF
+DATA	2140
+DATA	2.15
+DATA	ES
+DATA	2033
+DATA	2.04
+DATA	GO
+DATA	2020
+DATA	2.03
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q5: Payment Method Performance
+DESCRIPTION: How do customers prefer to pay? Revenue by payment method
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	payment_type	payment_type	UNKNOWN	2147483647	0			varchar
+COLUMNINFO	False	hive	total_orders	total_orders	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	total_revenue	total_revenue	UNKNOWN	17	0			double
+COLUMNINFO	False	hive	avg_order_value	avg_order_value	UNKNOWN	17	0			double
+COLUMNINFO	False	hive	avg_installments	avg_installments	UNKNOWN	17	0			double
+DATA	payment_type
+DATA	total_orders
+DATA	total_revenue
+DATA	avg_order_value
+DATA	avg_installments
+DATA	credit_card
+DATA	76505
+DATA	1.254208419E7
+DATA	163.32
+DATA	3.5
+DATA	boleto
+DATA	19784
+DATA	2869361.27
+DATA	145.03
+DATA	1.0
+DATA	voucher
+DATA	3866
+DATA	379436.87
+DATA	65.7
+DATA	1.0
+DATA	debit_card
+DATA	1528
+DATA	217989.79
+DATA	142.57
+DATA	1.0
+DATA	not_defined
+DATA	3
+DATA	0.0
+DATA	0.0
+DATA	1.0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q6: Review Score Distribution (Customer Satisfaction)
+DESCRIPTION: What's our customer satisfaction level?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	False	hive	review_score	review_score	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	review_count	review_count	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	percentage	percentage	UNKNOWN	17	0			double
+COLUMNINFO	True	hive	sentiment	sentiment	UNKNOWN	8	0			varchar
+DATA	review_score
+DATA	review_count
+DATA	percentage
+DATA	sentiment
+DATA	5
+DATA	57328
+DATA	57.78
+DATA	Positive
+DATA	4
+DATA	19142
+DATA	19.29
+DATA	Positive
+DATA	3
+DATA	8179
+DATA	8.24
+DATA	Neutral
+DATA	2
+DATA	3151
+DATA	3.18
+DATA	Negative
+DATA	1
+DATA	11424
+DATA	11.51
+DATA	Negative
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q7: On-Time Delivery Rate
+DESCRIPTION: What percentage of orders are delivered on time?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	delivery_status	delivery_status	UNKNOWN	7	0			varchar
+COLUMNINFO	False	hive	order_count	order_count	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	percentage	percentage	UNKNOWN	17	0			double
+DATA	delivery_status
+DATA	order_count
+DATA	percentage
+DATA	On Time
+DATA	88644
+DATA	91.89
+DATA	Late
+DATA	7826
+DATA	8.11
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q8: Top 10 States by Seller Performance
+DESCRIPTION: Which states have the most successful sellers?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	seller_state	seller_state	UNKNOWN	2147483647	0			varchar
+COLUMNINFO	False	hive	seller_count	seller_count	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	total_orders	total_orders	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	total_revenue	total_revenue	UNKNOWN	17	0			double
+DATA	seller_state
+DATA	seller_count
+DATA	total_orders
+DATA	total_revenue
+DATA	SP
+DATA	1849
+DATA	70188
+DATA	8753396.21
+DATA	PR
+DATA	349
+DATA	7673
+DATA	1261887.21
+DATA	MG
+DATA	244
+DATA	7930
+DATA	1011564.74
+DATA	RJ
+DATA	171
+DATA	4353
+DATA	843984.22
+DATA	SC
+DATA	190
+DATA	3667
+DATA	632426.07
+DATA	RS
+DATA	129
+DATA	1989
+DATA	378559.54
+DATA	BA
+DATA	19
+DATA	569
+DATA	285561.56
+DATA	DF
+DATA	30
+DATA	824
+DATA	97749.48
+DATA	PE
+DATA	9
+DATA	406
+DATA	91493.85
+DATA	GO
+DATA	40
+DATA	463
+DATA	66399.21
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q9: Customer Retention (Repeat Purchase Rate)
+DESCRIPTION: How many customers make repeat purchases?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	order_count_bucket	order_count_bucket	UNKNOWN	20	0			varchar
+COLUMNINFO	False	hive	customer_count	customer_count	UNKNOWN	19	0			bigint
+COLUMNINFO	False	hive	percentage	percentage	UNKNOWN	17	0			double
+DATA	order_count_bucket
+DATA	customer_count
+DATA	percentage
+DATA	1 order (New)
+DATA	99441
+DATA	100.0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY: Q10: Executive Dashboard - Key Metrics
+DESCRIPTION: High-level KPIs for executive summary
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0
+COLUMNINFO	True	hive	metric	metric	UNKNOWN	25	0			varchar
+COLUMNINFO	True	hive	value	value	UNKNOWN	2147483647	0			varchar
+DATA	metric
+DATA	value
+DATA	Total Orders
+DATA	99441
+DATA	Unique Sellers
+DATA	3095
+DATA	Total Products
+DATA	32951
+DATA	Total Revenue (BRL)
+DATA	1.600887212E7
+DATA	Delivery Success Rate %
+DATA	97.02
+DATA	Average Order Value (BRL)
+DATA	154.1
+DATA	Average Review Score
+DATA	4.09
+DATA	Unique Customers
+DATA	99441
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+END OF REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
